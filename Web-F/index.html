@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Scraper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .result-card {
+            background: #eef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hackathon Scraper</h1>
+        <p>Enter the URL of a hackathon page below:</p>
+        <input type="url" id="hackathonUrl" placeholder="Enter hackathon website URL" />
+        <button onclick="scrapeHackathon()">Scrape Hackathon Info</button>
+
+        <div class="results" id="results">
+            <h2>Scraped Details</h2>
+            <div id="hackathonData"></div>
+        </div>
+
+        <hr>
+        <h2>Compare Two Hackathons</h2>
+        <p>Enter the URLs of two hackathon pages:</p>
+        <input type="url" id="hackathonUrl1" placeholder="Enter first hackathon URL" />
+        <input type="url" id="hackathonUrl2" placeholder="Enter second hackathon URL" />
+        <button onclick="compareHackathons()">Compare Hackathons</button>
+        <div class="results" id="compareResults"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
